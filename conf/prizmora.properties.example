@@ -1,0 +1,52 @@
+# PL/SQL Database Access Descriptor name
+dad=ora
+# Procedure URLs will be urlPrefix + dad + "/" + procedure_name
+urlPrefix=/
+# TCP port to listen for HTTP requests on
+listenPort=8080
+# File to serve in response to errors
+errorPage=/var/www/html/errorPage.html
+# Hostname of database server
+dbHost=dbserver.domain.com
+# System ID of database
+dbSid=ourdb
+# Database username
+dbUsername=userid
+# Database user's password
+dbPassword=secret
+# Port of TNS listener
+dbPort=1521
+# Minimum number of database connections to keep in pool
+dbMinConnections=1
+# Maximum number of database connections to keep in pool
+dbMaxConnections=16
+# If true, rollback transactions when returning a connection to the pool
+dbRollback=false
+# If true, test connections when returning to pool; close them if test fails
+dbTestOnRelease=false
+# Timeout (in seconds) for connection tests
+dbTestTimeout=15
+# Timeout (in seconds) before a busy connection will be closed
+dbBusyTimeout=600
+# Timeout (in seconds) before an idle connection will be closed
+dbIdleTimeout=600
+# Interval (in seconds) at which idle connections will be tested
+dbTestInterval=300
+# Time (in seconds) that we will wait for the connection pool to close
+dbShutdownWaitTime=60
+# Database character set
+dbCharset=iso-8859-1
+# If false, procedure signatures will be resolved on every request. This
+# impacts performance, so it should only be used for development where
+# procedures are frequently modified.
+dbCacheProcedures=false
+# Directory to spool large responses to
+spoolDirectory=/tmp
+# Size threshold (in bytes) before a response is spooled to disk
+spoolThreshold=4194304
+# Number of threads to dedicate to servicing requests.
+threadPoolSize=16
+# If true, error messages from database are shown. If false, the errorPage
+# will be shown instead. Set to true only in non-production environments to
+# prevent disclosure of sensitive information.
+showErrors=true
